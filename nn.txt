@@ -1,18 +1,46 @@
-sklklskalks
+#include<iostream>
+using namespace std;
+class  animal  //定义的动物父类
+{
+	char colour[100];
+	int lianling;
+	char xingbie[100];
+	public:
+		virtual void speak1()
+		{
+			cout<<"亲爱的用户,我是你的宠物狗狗,汪汪汪汪"<<endl; 
+		}
+		virtual void speak2()
+		{
+			cout<<"亲爱的用户,我是你的宠物小猫,喵喵喵喵"<<endl; 
+		}
+	};
+class dogs:public animal //定义动物基类的派生类
+{
+	char name[100];
+	 void speak1()
+	 {
+	 		cout<<"亲爱的用户,我是你的宠物狗狗,汪汪汪汪"<<endl;
+	 }
 
-sasaasas
-sasasaasassa
-ssss
+} ;
+class cats:public animal //定义动物的基类的派生类
+{
+	char name[100];
+	void speak2()
+	{
+		cout<<"亲爱的用户,我是你的宠物小猫,喵喵喵喵"<<endl; 
+	 } 
 
-
-saas
-
-
-
-
-
-
-
-
-LOL，了，了，了，了，了，了，了，了，了，了，了，了，了，了，了，了，bgn
-hhhhh
+};
+int main()
+{
+	dogs a;
+	cats b;
+	animal *p1=&a;
+	animal *p2=&b;
+	p1->speak1();
+	p2->speak2();
+	return 0;
+	
+}
